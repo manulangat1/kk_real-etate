@@ -150,6 +150,7 @@ logger = logging.getLogger(__name__)
 
 LOG_LEVEL = "INFO" 
 
+AUTH_USER_MODEL = 'users.User'
 
 logging.config.dictConfig(
     {
