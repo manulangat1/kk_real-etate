@@ -9,9 +9,10 @@ from apps.common.models import TimeStampedModel
 User = get_user_model()
 
 class Gender(models.TextChoices):
-        MALE = "MALE", _("MALE")
-        FEMALE = "FEMALE", _("FEMALE")
-        OTHER = "OTHER", _("OTHER")
+    """this is a"""
+    MALE = "MALE", _("MALE")
+    FEMALE = "FEMALE", _("FEMALE")
+    OTHER = "OTHER", _("OTHER")
 class Profile(TimeStampedModel):
     user = models.OneToOneField(User, related_name="profile", on_delete=models.CASCADE)
     phone_number = PhoneNumberField(

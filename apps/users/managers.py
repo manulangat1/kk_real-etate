@@ -5,7 +5,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 class CustomUserManager(BaseUserManager):
+    """
+    This is the custom user manager class that is used to create users and superusers"""
     def email_validator(self,email):
+        """
+        this method is used to validate the email address"""
         try:
             validate_email(email)
         except ValidationError:
